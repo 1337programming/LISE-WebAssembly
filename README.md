@@ -1,12 +1,26 @@
-# LISE-WebAssembly
-The LISE Game Engine for WebAssembly -- this is just a fun OpenGL project for WebAssembly development.
+# LISE WebAssembly 
 
-# Setup
+The purpose of this project is to create a very basic minimal CMake project able to compile C++ program using emscripten with the following features enabled:
+* Linking to external C++ library crosscompiled to JS file
+* Using bindings created via Embind
+* Preloading assets files
 
-## Goals
+## How to use
+1. Create build directory ```build``` and go there
+2. Run cmake specifying toolchain file ```CMAKE_TOOLCHAIN_FILE=path/to/emscripten/emscripten/version/cmake/Modules/Platform/Emscripten.cmake```
+3. Run ```make```
 
-1. Create a platform that can output both WebAssembly and native binaries with OpenGL tools
-2. Select a architecture
-3. Cross Platform
-4. Provide a solid API integration for JavaScript consumption
-5. Decide to use Emscripten or Cheerp
+Compiled file called ```client.js``` along with the preloaded assets in file ```client.data``` will be put into ```build.emscripten``` directory. Check if it works by opening ```build.emscripten/index.html``` in browser.
+
+## TODO
+
+- [x] CMake Conversion 
+- [x] Embind
+- [x] Passing Emscripten Arguments 
+- [x] Support uploading files
+- [ ] WASM Output 
+- [x] Sample Vendor Compiling
+- [ ] Sample Vendor Runtime (doesn't work in browser) 
+- [ ] Select OpenGL libraries
+- [ ] Select Architecture
+- [ ] Document Architecture
