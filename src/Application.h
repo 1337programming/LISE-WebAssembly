@@ -22,9 +22,9 @@ EMSCRIPTEN_BINDINGS(my_module) {
         function("lerp", &lerp);
 
         class_<Application>("Application")
-          .constructor()
-        .function("Initialize", &Application::Initialize)
-        .function("SayHello", &Application::SayHello);
+                .constructor()
+                .function("Initialize", &Application::Initialize)
+                .function("SayHello", &Application::SayHello);
 
         //value_struct<myStruct>("myStruct")
         //    .field("x", &myStruct::x)
@@ -32,18 +32,18 @@ EMSCRIPTEN_BINDINGS(my_module) {
         //    ;
 
         class_<myStruct>("myStruct")
-        .constructor<>()
-        .function("getX", &getX)
-        .function("setX", &setX)
-        .property("x", &getX, &setX);
+                .constructor<>()
+                .function("getX", &getX)
+                .function("setX", &setX)
+                .property("x", &getX, &setX);
 
         function("getStruct", &getStruct);
 
         class_<MyClass>("MyClass")
-        .constructor<int, std::string>()
-        .function("incrementX", &MyClass::incrementX)
-        .property("x", &MyClass::getX, &MyClass::setX)
-        .class_function("getStringFromInstance", &MyClass::getStringFromInstance);
+                .constructor<int, std::string>()
+                .function("incrementX", &MyClass::incrementX)
+                .property("x", &MyClass::getX, &MyClass::setX)
+                .class_function("getStringFromInstance", &MyClass::getStringFromInstance);
 }
 
 #endif

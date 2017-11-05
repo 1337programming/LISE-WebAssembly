@@ -1,0 +1,24 @@
+[submodule "lib/assimp"]
+    path = lib/assimp
+    url = https://github.com/assimp/assimp.git
+    branch = master
+[submodule "lib/glad"]
+    path = lib/glad
+    url = https://github.com/Dav1dde/glad.git
+    branch = c
+[submodule "lib/glfw"]
+    path = lib/glfw
+    url = https://github.com/glfw/glfw.git
+    branch = master
+[submodule "lib/glm"]
+    path = lib/glm
+    url = https://github.com/g-truc/glm.git
+    branch = master
+[submodule "lib/stb"]
+    path = lib/stb
+    url = https://github.com/nothings/stb.git
+    branch = master
+[submodule "lib/bullet"]
+    path = lib/bullet
+    url = https://github.com/bulletphysics/bullet3.git
+    branch = master
