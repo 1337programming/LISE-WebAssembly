@@ -10,6 +10,9 @@ Check browser console.
 <canvas id="canvas"></canvas>
 
 <script type="text/javascript">
+    /**
+     * @TODO build wasm loader
+     */
     fetch('client.wasm').then(response =>
     response.arrayBuffer()
     ).then(bytes =>

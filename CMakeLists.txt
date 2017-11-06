@@ -4,7 +4,7 @@ cmake_policy(SET CMP0015 NEW)
 project(emtest)
 
 set(CMAKE_VERBOSE_MAKEFILE on)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build.emscripten)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/dist)
 
 # All C files for including into the project
 include_directories("lib/assimp/include")

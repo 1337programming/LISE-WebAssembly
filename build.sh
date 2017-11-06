@@ -8,8 +8,10 @@ echo Make sure to activate your emscripten environment
 rm -rf build
 mkdir build
 cd build/
-cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/Emscripten.cmake -G "Unix Makefiles" ..
-make
+emconfigure cmake ../
+emmake make
+#cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/Emscripten.cmake -G "Unix Makefiles" .. #Replace this with your emscripten cmake
+#make
 
 ## Building binaries
 #mkdir build

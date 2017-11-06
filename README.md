@@ -18,13 +18,12 @@ What you will need
 * Emscripten
 
 ## How to use
-1. Create build directory ```build``` and go there
-2. Run cmake specifying toolchain file ```CMAKE_TOOLCHAIN_FILE=path/to/emscripten/emscripten/version/cmake/Modules/Platform/Emscripten.cmake```
-3. Run ```make```
+1. Setup project `./setup.sh` - this will build and compile the libraries 
+2. Build project `./build.sh` - this will build the project
+3. See output in `dist/index.html`
 
-**Note:** You must build your LLVM libraries, see `build.sh` for guidance.
+**Note: there is no wasm loader at this time, see example output or modify output from `client.js` to `client.html`**
 
-Compiled file called ```client.js``` along with the preloaded assets in file ```client.data``` will be put into ```build.emscripten``` directory. Check if it works by opening ```build.emscripten/index.html``` in browser.
 
 ## Tech Stack
 
@@ -43,13 +42,17 @@ Texture Loading         | [stb](https://github.com/nothings/stb)
 - [x] CMake Conversion 
 - [x] Embind
 - [x] Passing Emscripten Arguments 
-- [x] Support uploading files
+- [ ] Support uploading files
+- [x] Provide example WASM output
 - [x] WASM Output (requires loader file)
 - [x] Sample Vendor Compiling
-- [x] Sample Vendor Runtime (must build LLVM separately) 
+- [x] Sample Vendor Runtime 
 - [x] Select OpenGL libraries
-- [ ] Script to build LLVM libraries
+- [x] Script to build LLVM libraries
+- [ ] Sample JavaScript Application
+- [ ] Convert bash scripts in CMake (I suck at CMake)
 - [ ] JavaScript Loader
 - [ ] Select Architecture
 - [ ] Document Architecture
-- [ ] Unit Testing Setup
+- [ ] C++ Unit Testing Setup with Google Test
+- [ ] Platform to support Web & Native

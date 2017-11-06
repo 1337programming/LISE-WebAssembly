@@ -29,10 +29,19 @@ function build() {
     mkdir lib-js
     emconfigure cmake .
     emmake make
+    # Check if errors
     if [ $? -eq 0 ]; then
-        echo OK
+        echo -e "${GREEN} make complete"
     else
-        echo FAIL
+        echo -e "${RED} Errors while running make"
+    fi
+}
+
+function checkError() {
+    if [ $? -eq 0 ]; then
+        echo -e "${GREEN} LLVM compile complete"
+    else
+        echo -e "${RED} Errors linking binaries"
     fi
 }
 
@@ -41,6 +50,7 @@ echo -e "${GREEN}Building Assimp LLVM Binaries...${NC}"
 cd assimp/
 build
 em++ -O2 code/CMakeFiles/assimp.dir/*.cpp.o -o lib-js/libassimp.so
+checkError
 cd ../
 
 ## Build Bullet 3
@@ -51,6 +61,7 @@ echo -e "${GREEN}Building Glad LLVM Binaries...${NC}"
 cd glad/
 build
 em++ -O2 CMakeFiles/glad.dir/src/*.o -o lib-js/libglad.so
+checkError
 cd ../
 
 ## Build GLFW
@@ -61,6 +72,7 @@ echo -e "${GREEN}Building Glad LLVM Binaries...${NC}"
 cd glm/
 build
 em++ -O2 glm/CMakeFiles/glm_dummy.dir/detail/*.o -o lib-js/libglm.so
+checkError
 cd ../
 
 ## Build stb
