@@ -6,6 +6,17 @@ The purpose of this project is to create a very basic minimal CMake project able
 * Preloading assets files
 * Sample OpenGL stack to get going
 
+## Requirements
+
+See the WebAssembly [setup](http://webassembly.org/getting-started/developers-guide/) to get all the requirements.
+
+What you will need
+
+* Python 2.7
+* C++ Compiler
+* CMake
+* Emscripten
+
 ## How to use
 1. Create build directory ```build``` and go there
 2. Run cmake specifying toolchain file ```CMAKE_TOOLCHAIN_FILE=path/to/emscripten/emscripten/version/cmake/Modules/Platform/Emscripten.cmake```
@@ -41,3 +52,4 @@ Texture Loading         | [stb](https://github.com/nothings/stb)
 - [ ] JavaScript Loader
 - [ ] Select Architecture
 - [ ] Document Architecture
+- [ ] Unit Testing Setup

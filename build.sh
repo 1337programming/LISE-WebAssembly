@@ -24,7 +24,7 @@ make
 # ~/emsdk/emscripten/1.37.22/em++ --bind -o build.emscripten/client.js src/Application.cpp src/Application_Bindings.cpp src/MyClass.cpp
 
 # @TODO Build setup for libraries
-# inside lib/assimp
+# inside lib/assimp (ensure you have emscripten activated)
 # emconfigure cmake .
 # emmake make
 # emcc -O2 code/CMakeFiles/assimp.dir/*.cpp.o -o lib-js/libassimp.so
