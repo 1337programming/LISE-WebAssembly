@@ -24,6 +24,8 @@ What you will need
 
 **Note: there is no wasm loader at this time, see example output or modify output from `client.js` to `client.html`**
 
+You can also view the example by unzipping `example.zip`.
+
 
 ## Tech Stack
 
