@@ -8,7 +8,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build.emscripten)
 
 # All C files for including into the project
 include_directories("lib/assimp/include")
-include_directories("lib/bullet3/src")
+include_directories("lib/bullet/src")
 include_directories("lib/emscripten/system/include")
 include_directories("lib/glad/include")
 include_directories("lib/glfw/include")
@@ -22,7 +22,7 @@ link_directories("lib/glm/lib-js")
 
 # Linking C & LLVM code
 link_libraries("assimp")
-# link_libraries("bullet3")
+# link_libraries("bullet")
 # link_libraries("emscripten")
 link_libraries("glad")
 # link_libraries("glfw")
