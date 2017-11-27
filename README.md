@@ -17,7 +17,11 @@ What you will need
 * CMake
 * Emscripten
 
-## How to use
+## Install
+
+Start by cloning this repository, making sure to pass the `--recursive` flag to grab all the dependencies. If you forgot, then you can git `submodule update --init` instead.
+
+### How to use
 1. Setup project `./setup.sh` - this will build and compile the libraries 
 2. Build project `./build.sh` - this will build the project
 3. See output in `dist/index.html`
